@@ -4,7 +4,10 @@
 def mergeSort(arr, left, right):
     if (left<right):
 
-        mid = (left+right)//2
+        # mid = (left+right)//2
+
+        # Best Approach for calculating Mid
+        mid = left + (right-left)//2
 
 
         #Divide the first half
