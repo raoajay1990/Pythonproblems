@@ -22,11 +22,19 @@ class Solution:
     def productExceptSelf(self, nums) :
         product_array = [1] * len(nums)
 
+        # Find the product of array by doing 2 steps
+        # Find the prefix sum 
+        # Find the Suffix sum 
+        # Multiply prefix and Suffix
+
+        # In this loop we will find the Prefix Sum buy starting from the left
         for i in range(1,len(nums)):
             product_array[i] = product_array[i-1] * nums[i-1]
 
+        # Initializing right for Suffix sum
         right = nums[-1]
 
+        # In this loop we will find the Suffix sum by starting from the right and multiply with left product
         for i in range(len(nums)-2, -1, -1):
             product_array[i] *= right
             right *= nums[i]
