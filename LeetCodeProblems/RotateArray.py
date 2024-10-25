@@ -23,6 +23,7 @@ class Solution:
 
         while(start<end):
             try:
+
                 temp = nums[start]  
                 nums[start] = nums[end]
                 nums[end] = temp
@@ -32,7 +33,8 @@ class Solution:
             except IndexError as e:
                 end -= 1
                 start -= 1
-            
+
+
     def rotate(self, nums, k: int) :
         # result = [1]* len(nums)
         # for i in range(len(nums)-1 , -1,-1):
@@ -47,11 +49,15 @@ class Solution:
         return nums
         
 
+
 nums = [1,2]
 k = 3
+
+
 sol = Solution()
 result = sol.rotate(nums,k)
 print(f"Result - {result}")
+
 
 # nums = [-1]
 # k = 2
@@ -70,3 +76,16 @@ print(f"Result - {result}")
 # sol = Solution()
 # result = sol.rotate(nums,k)
 # print(f"Result2 - {result}")
+
+nums = [-1,-100,3,99]
+k=2
+sol = Solution()
+result = sol.rotate(nums,k)
+print(f"Result - {result}")
+
+nums = [1,2,3,4,5,6,7]
+k=3
+sol = Solution()
+result = sol.rotate(nums,k)
+print(f"Result2 - {result}")
+
