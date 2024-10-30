@@ -25,7 +25,7 @@ from collections import Counter
 def minWindow(s: str, t: str) -> str:
 
     if len(t) > len(s):
-        return " "
+        return ""
     
     i = 0
     current_string = s[:len(t)]
@@ -52,7 +52,7 @@ def minWindow(s: str, t: str) -> str:
             current_string = s[i:j+1]
         i += 1
 
-    return s[start_index:end_index+1] if is_Found else " "
+    return s[start_index:end_index+1] if is_Found else ""
 
 s="aa"
 t="aa"
